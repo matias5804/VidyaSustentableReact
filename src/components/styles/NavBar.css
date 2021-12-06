@@ -1,0 +1,20 @@
+.divNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__container{
+    display: flex;
+}
+
+.nav__item{
+    margin-right: 2rem;
+    list-style: none;
+    font-size: x-small;
+}
+
+.nav__logo{
+    height: 40px;
+    margin-right: 1rem;
+}
