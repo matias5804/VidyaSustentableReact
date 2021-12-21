@@ -1,7 +1,8 @@
-import React from 'react'
-import CartWidget from './CartWidget'
-import '../styles/NavBar.css'
-import logoHorizontal from '../../assets/img/logoHorizontal.png';
+import React from 'react';
+import CartWidget from '../cartwidget/CartWidget';
+import '../styles/NavBar.css';
+import logoHorizontal from '../../assets/imgLogos/logoHorizontal.png';
+
 
 
 const NavBar = () => {
@@ -22,7 +23,7 @@ const NavBar = () => {
                     <h1> NOSOTROS </h1> 
                 </li>
                 <li className="nav__item">
-                    <h1 > CONTACTO </h1>
+                    <h1 > CONTACTo </h1>
                 </li>
             </ul>
             <CartWidget/>

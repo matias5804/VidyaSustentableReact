@@ -1,0 +1,15 @@
+.tienda{
+    display: flex;
+    border-radius: 1px solid;
+}
+
+.card{
+    height: 200px;
+    width: 150px;
+    ;
+}
+
+.imgCard{
+    width: 100px;
+    height: 100px;
+}
