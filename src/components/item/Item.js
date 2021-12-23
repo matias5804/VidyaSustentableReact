@@ -8,37 +8,25 @@ import '../styles/styles.css';
 
 
 //le hacemos llegar solo item
-const Item = ({id,name, category, image, price}) => {
+const Item = ({id, name, category, image, price}) => {
 
 
     return( 
-   
         <>
-            <div className={`gridTienda ${category}-category`}>
-
-                <div className='card'>
-                    <Link to={(`/product/${id}`)}>  
-            
-                        <div className='divImgCard'>
-
-                            <img src={image} alt={name} className='imgCard'></img>
-
-                        </div>
-                    
-                    </Link> 
-                  
+            <div className='card'>
+                <Link to={(`/product/${id}`)}className='div_imgCard'>  
+                    <div className='divImgCard'>
+                        <img src={image} alt={name} className='imgCard'></img>
+                    </div>
+                </Link> 
+                <div className='divProPreBot'>
                     <h3 className="tituloCard">{name}</h3>
-                    {/*<span>Cat {category} </span>- por ahora la voy a sacar*/}
-                    
                     <p className="precioCard">$ <span>{price}</span></p>
                     <button className="btnComprarCard">
                                 Agregar al Carrito
                     </button>
-                    
                 </div>
-            
             </div>
-        
         </>
         
     );

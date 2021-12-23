@@ -30,10 +30,5 @@ export const ItemListContainer = ({ greeting }) => {
 
   return loading ? (
     <h2>CARGANDO...</h2>
-  ) : (
-    <>
-      <h3>{greeting}</h3>
-      <ItemList items={items} />
-    </>
-  );
+  ) : (<ItemList items={items} />);
 };

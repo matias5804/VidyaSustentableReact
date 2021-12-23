@@ -4,21 +4,21 @@ import { NavLink } from 'react-router-dom';
 
 export const Categories = () => {
     const categories = [
-      { id: '1Total', address: '/', text: 'Todos los Productos' },
+      { id: '1Total', address: '/', text: 'Todos' },
       { id: '2daCat', address: '/category/Personal', text: 'Cuidado Personal' },
       { id: '3eraCat', address: '/category/Hogar', text: 'Cuidado del Hogar' },
     ];
   
     return (
-      <section style={{ background: 'lightgray' }}>
+      <section className='navSelecProducts'>
         {categories.map((cat) => {
           return (
-            <div className="links" key={cat.id}>
-              <NavLink
+            <div className="linksProducts" key={cat.id}>
+              <NavLink 
                 to={cat.address}
                 className={({ isActive }) => (isActive ? 'activeClass' : '')}
               >
-                {cat.text}
+                {cat.text} 
               </NavLink>
             </div>
           );

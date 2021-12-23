@@ -7,13 +7,6 @@ import {ItemListContainer} from "./components/itemListContainer/ItemListContaine
 import { ItemDetailContainer } from "./components/itemDetailContainer/ItemDetailContainer";
 import { Categories } from './components/mock/Categorias';
 
- 
-
-//import Contacto from "./components/pages/Contacto";
-//import Home from "./components/pages/Home";
-//import Nosotros from "./components/pages/Nosotros";
-//import Tienda from "./components/pages/Tienda";
-
 function App () {
   
   return  (
@@ -24,7 +17,7 @@ function App () {
 
         <Routes>
           <Route path="/" element={<ItemListContainer greeting={'HOME'} />} />
-          <Route
+          <Route className= "tiendaa"
             path="/category/:catId"
             element={<ItemListContainer greeting={'FILTRADO'} />}
           />
