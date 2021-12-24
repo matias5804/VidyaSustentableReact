@@ -18,11 +18,11 @@ export const ItemDetailContainer = () => {
       //el timer funciona  
       setTimeout(() => {
 
-        //nofunciona la constante myy data!- si le saco el === Item me trae siempre el detalle del primer producto
+       
         const myData = itemId && MockedItem.find((item) => item.id === itemId)
         
-        //me devuelve undefine= !!!!!!!!!!!!!!!
-        console.log(myData);
+       
+        //console.log(myData);
 
         resolve(myData);
       }, 1000);

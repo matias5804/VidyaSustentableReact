@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
+import '../styles/detail.css';
+
 
 const ItemCount = ({stock, initial}) => {
     console.log("Soy promps de ItemCount", stock );
@@ -33,16 +35,16 @@ const ItemCount = ({stock, initial}) => {
 
 
     return (
-
-        <div>
-            <h1>voy a ser el contador</h1>
-            <div>
-                <button onClick= {addItem}> +</button>
-                <h3>{ count }</h3>
-                <button onClick= {quitItem} >-</button>
-            </div>
-            <button onClick= {onAdd} >Agregar al Carrito</button>
-        </div>
+        
+<>
+    <div className='divAddRest'>
+        <button onClick= {addItem}> +</button>
+        <h3>{ count }</h3>
+        <button onClick= {quitItem} >-</button>
+    </div>
+    <button className='btnAgregarDetail' onClick= {onAdd} >Agregar al Carrito</button>
+</>
+     
     )
 }
 

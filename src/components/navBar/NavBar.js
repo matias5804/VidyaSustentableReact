@@ -2,7 +2,7 @@ import React from 'react';
 import CartWidget from '../cartwidget/CartWidget';
 import '../styles/navBar.css';
 import logoHorizontal from '../../assets/imgLogos/logoHorizontal.png';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 
@@ -13,22 +13,24 @@ const NavBar = () => {
         <div className="divNav">
         
             <div className="nav__divBrand">
-                <a href="index.html" className="nav__brandLink">
+                <Link to="/" className="nav__brandLink">
                     <img className="nav__brand" src={logoHorizontal} alt="logo"/>
-                </a>
+                </Link>
             </div>
 
-            <ul className="nav__container">
-                <li className="nav__item">
-                    <h2 > TIENDA </h2>
-                </li>
-                <li className="nav__item">
-                    <h2> NOSOTROS </h2> 
-                </li>
-                <li className="nav__item">
-                    <h2 > CONTACTO </h2>
-                </li>
-            </ul>
+                <ul className="nav__container">
+                    <li className="nav__item">
+                        <h2> TIENDA </h2>
+                    </li>
+                    <li className="nav__item">
+                        <h2> NOSOTROS </h2> 
+                    </li>
+                    <li className="nav__item">
+                        <h2> CONTACTO </h2>
+                    </li>
+                </ul>
+            
+
             <CartWidget/>
         </div>
     )

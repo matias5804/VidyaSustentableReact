@@ -1,0 +1,104 @@
+.divDet{
+    display: flex;
+    flex-direction: column
+}
+
+.divImaDet{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.imgDet{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.divNamePriceDet{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 0.3rem;
+}
+
+.btnAgregarDetail{
+    font-size: large;
+    color:#356d65ff;
+    width: 170px;
+    height: 35px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    background-color:#f1cbb5ff;
+    margin-top: 0.7rem;
+    
+}
+
+.btnAgregarDetail:hover{
+    background-color:#356d65ff;
+    color:#f7ecdfff;
+}
+
+.divPreBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.divDesDet{
+    padding: 1.5rem;
+}
+
+.textDesDet{
+    font-size: large;
+}
+
+@media (min-width:600px) {
+    
+    .divDet{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 20px 0px 20px; 
+            
+    }
+
+    .divImaDet{
+        max-width: 400px;
+        height: auto; 
+    }
+    
+    .divNamePriceDet{
+        margin-top: 60px;
+    }
+
+    .divDesDet{
+        padding: 2.5rem;
+    }
+    
+    .textDesDet{
+        font-size:x-large;
+    }
+}
+
+@media (min-width:800px) {
+
+    .divImaDet{
+        max-width: 600px;
+    }
+
+    .divDet{
+     display: flex;
+     justify-content: center;
+     
+    }
+
+    .divDesDet{
+        padding-right: 8rem;
+        padding-left: 8rem;
+    }
+}
