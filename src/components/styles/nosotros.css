@@ -1,0 +1,49 @@
+/*inicio de los estilos de lifestyle y nosotros */
+.divNota__masInfo{
+    text-align: center;
+    margin: 5%;
+}
+
+.imagenPortada{
+    width: 100%;
+}
+
+.imagenPortadaPago{
+    padding: 0px 50px 50px 50px;
+}
+
+.divSubYTitulo{
+    margin: 3%;
+    font-size: large;
+}
+ 
+.divParrafo{
+    text-align: left;
+    margin: 5%;
+}  
+
+.textoArticulos{
+    font-size: medium;
+    padding: 30px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}/*Finaliza los esilos de lifestyle y nosotros*/
+
+
+@media (min-width: 600px){
+     /*comienzan los estilos de nosotros*/
+    .imagenNota{
+        width: 100%;
+        height: auto;
+    }
+
+    .textoArticulos{
+        font-size: large;
+        padding: 30px;
+        word-spacing: 1.5px;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+}
+

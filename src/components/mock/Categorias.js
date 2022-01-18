@@ -14,12 +14,11 @@ export const Categories = () => {
         {categories.map((cat) => {
           return (
             <div className="linksProducts" key={cat.id}>
-              <NavLink 
-                to={cat.address}
-                className={({ isActive }) => (isActive ? 'activeClass' : '')}
-              >
+
+              <NavLink to={cat.address} className={({ isActive }) => (isActive ? 'activeClass' : '')}              >
                 {cat.text} 
               </NavLink>
+              
             </div>
           );
         })}

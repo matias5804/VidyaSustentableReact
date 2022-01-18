@@ -115,8 +115,13 @@ body {
 .linksProducts a{
     font-size: medium;
     text-decoration: none;
-    color:#f7ecdfff;
+    color:white;
     letter-spacing: 1px;
+}
+
+.linksProducts :hover{
+    color: black;
+    font-weight: 600;
 }
 
 /*---------------------------------------------------------*/

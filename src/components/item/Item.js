@@ -4,13 +4,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/styles.css';
 
-
-
-
 //le hacemos llegar solo item
 const Item = ({id, name, category, image, price}) => {
-
-
     return( 
         <>
             <div className='card'>

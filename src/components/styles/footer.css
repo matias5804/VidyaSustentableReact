@@ -1,0 +1,101 @@
+/*
+#356d65ff:  #356d65ff;
+$colorSec:  #f1cbb5ff;
+$colorTer:  #f7ecdfff;
+$colorWhite:#FFFFFF;
+*/
+* 
+::before,
+::after{/*incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra.*/
+    box-sizing: border-box;
+}
+
+*{ /* reseteo CSS*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100%;/*para que el grid ocupe el 100% de la pagina%*/
+    text-align: center;
+    height: 100%;   
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer{
+    background-image: linear-gradient(#356d65ff,#f1cbb5ff);
+    color:#FFFFFF;
+}
+
+.footer__mapaDeSitio{
+    padding-top: 20px;
+}
+
+.footer__navegador{
+    margin: 10px;
+    text-decoration: none;    
+}
+
+.footerItem{
+    text-decoration: none;    
+    margin: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footerItem:hover{
+    text-decoration: underline;
+}
+
+.footer__newsletter{
+    margin: 40px;
+}
+
+.footer__copyright{
+    color: #356d65ff;
+}
+
+.footer__btn{/*boton*/
+    text-decoration: none;
+    padding: 2px;
+    color:#356d65ff;
+    font-weight: 500;/*ancho de le letra*/
+    background-color: #f1cbb5ff;
+    border-radius: 4px;
+}
+
+.footer__btn:hover{   
+    background-color:#356d65ff;
+    color:#f7ecdfff;
+}
+
+@media (min-width:1000px) {/*se ejecuta cuando el ancho tenga como minimo 1000px*/
+
+
+    .footer__mapaDeSitio{
+        padding-top: 20px;
+        width: 50%;
+        font-size: x-large;
+    }
+
+    .footer__div{
+			
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+    }
+
+
+    .footer__newsletter{
+        font-size: x-large;
+        margin: 30px;
+        text-align: start;
+    }
+
+
+    .footer__copyright{
+        color:#356d65ff;
+    }
+} /*fin de los estilos del footer*/ 

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../styles/detail.css';
 
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, addItem }) => {
     console.log("Soy promps de ItemCount", stock );
     console.log(initial) ;
     // Voy a Sumar hasta que el numero sea menor o igual que stock
@@ -13,14 +13,14 @@ const ItemCount = ({stock, initial}) => {
     const[count, setCount] = useState(initial)
     console.log("soy el estado inicial del contador", count);
 
-    const addItem = () => {
+    const addItemCont = () => {
        const newValue = count + 1;
        if(newValue <= stock ){
            setCount(newValue);
        };
     };
 
-    const quitItem = () => {
+    const quitItemCount = () => {
         const newValue = count - 1;
         if(newValue >= initial) {
             setCount(newValue);
@@ -38,11 +38,12 @@ const ItemCount = ({stock, initial}) => {
         
 <>
     <div className='divAddRest'>
-        <button onClick= {addItem}> +</button>
+        <button onClick= {addItemCont}> +</button>
         <h3>{ count }</h3>
-        <button onClick= {quitItem} >-</button>
+        <button onClick= {quitItemCount} >-</button>
     </div>
-    <button className='btnAgregarDetail' onClick= {onAdd} >Agregar al Carrito</button>
+    {/** acá es donde tengo el problema que no defino item , en teoria lo traigo desde el Context */}
+    <button className='btnAgregarDetail' onClick= {() => addItem ({item, qty})} >Agregar al Carrito</button>
 </>
      
     )
