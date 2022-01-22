@@ -1,13 +1,14 @@
-import React from 'react';
+import React,{ useContext }  from 'react';
 import '../styles/detail.css';
 import ItemCount from '../itemCount/ItemCount';
-import { useContext } from 'react/cjs/react.development';
 import { CartContext } from '../context/useContext';
 
 
 export const ItemDetail = ({id, name, image, description, price}) => {
 
   const {addItem} = useContext(CartContext)
+  
+
 
   return (
     <>
@@ -23,7 +24,7 @@ export const ItemDetail = ({id, name, image, description, price}) => {
           
           <div className='divPreBtn'>
             <h2><span>$ </span>{price}</h2>
-            <ItemCount item={id} stock={5} initial={1} onAdd={addItem} />
+            <ItemCount  item={id} stock={5} initial={1} onAdd={addItem} />
           </div>
 
         </div>    

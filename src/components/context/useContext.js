@@ -1,44 +1,59 @@
-import React, { createContext, useState } from 'react'
-
-
-export const CartContext = createContext([]);
-
-export const CartProvider = ({ children }) => {
-
-    const [items,setItems] = useState([])
-
-    const isInCart = (id) => {
-        const found = items.find (item => item.id === id);
-        return found;
+import { createContext, useContext, useState } from 'react';
+export const CartContext = createContext();
+export const UseCart = () => useContext(CartContext);
+export const CartProvider = ({children}) =>{
+    const [addedProducts, setAddedProducts] = useState([]);
+    const addItem = (item, quantity) => { 
+        setAddedProducts(addedProducts.filter(item => item !== undefined ))
+        if(isIncart(item.Id)){
+            let index =  addedProducts.findIndex((prod) => prod.item.Id === item.Id)
+            let PosibleQuantity = addedProducts[index].quantity + quantity;
+            addedProducts[index].quantity = PosibleQuantity
+        }else{
+           setAddedProducts([...addedProducts,{item, quantity}]);
+        }
     }
-
-    const addItem = (item, qty) => {
-        isInCart(item.id)
-            ?
-            setItems(items.map((prod) => {
-                if (prod.id === item.id){
-                    prod.qty += qty
-                }
-                return prod
-            }))
-            :
-            setItems([...items, {id: item.id, name: item.name, price: item.price, qty : qty}])
+    const removeItem = (id) => { 
+        setAddedProducts(addedProducts.filter(item => item.item.Id !== id ))
     }
-
-    const removeItem = (id) => {
-        setItems(items.filter(item => item.id !== id ))
+    const getTotalPrice = () => { 
+        let aux = 0;
+        addedProducts.map(item =>{
+           aux = aux + (item.item.Price * item.quantity) ;
+           return aux;
+        })
     }
-
-    const crearItems = () => {
-        setItems([])      
+    const itemSumatory = ()=>{
+        let aux = 0;
+        addedProducts.map(item =>{
+           aux = aux + item.quantity;
+           return aux;
+        })
     }
-
+    const clear = () => { 
+        setAddedProducts([]);
+    }
+    const isIncart = (id) => { 
+        let bool = false;
+        addedProducts.map(product =>{
+            if(product.item.Id === id) {
+                bool = true;
+            }
+            return bool;
+        });
+    }
+    const getItemQuantity = (id) => { 
+        let quant = 0
+        addedProducts.map(product =>{
+            if(product.item.Id === id) {
+                quant = (product.quantity)
+            }  
+            return quant
+        });
+    }
     return (
-
-        <CartContext.Provider value={{ items, addItem, removeItem}}>
+        <CartContext.Provider value = {{addItem, removeItem, addedProducts, getTotalPrice, itemSumatory, clear, getItemQuantity, isIncart}}>
             {children}
         </CartContext.Provider>
     )
-}
-
-
+};

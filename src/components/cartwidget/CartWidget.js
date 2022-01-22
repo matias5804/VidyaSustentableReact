@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useContext }from 'react'
 import logoCarrito from '../../assets/imgLogos/logoCarrito.png';
 import { Link } from 'react-router-dom';
 import Cart from '../cart/Cart';
-import { useContext } from 'react/cjs/react.production.min';
 import { CartContext } from '../context/useContext';
 
 
 const CartWidget = () => {
 
-    const { items } = useContext(CartContext)
+    const { addedProducts} = useContext(CartContext)
+
+
     let itemsInCart = 0;
 
-    items.map((item) => {
-        itemsInCart = itemsInCart + item.qty;
+    addedProducts.map((item) => {
+        itemsInCart = itemsInCart + item.quantyti;
     })
 
     return (
