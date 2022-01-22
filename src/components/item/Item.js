@@ -18,7 +18,7 @@ const Item = ({id, name, category, image, price}) => {
                     <h3 className="tituloCard">{name}</h3>
                     <p className="precioCard">$ <span>{price}</span></p>
                     <button className="btnComprarCard">
-                                Agregar al Carrito
+                       - Ver Articulo -
                     </button>
                 </div>
             </div>

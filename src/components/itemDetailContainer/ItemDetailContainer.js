@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 export const ItemDetailContainer = () => {
   //selecciona los productos por categoria
-  const [product, setProduct] = useState({});
+  const [item, setItem] = useState({});
   const [loading, setLoading] = useState(true);
 
   const { itemId } = useParams();
@@ -30,11 +30,11 @@ export const ItemDetailContainer = () => {
 
     getItems
       .then((res) => {
-        setProduct(res);
+        setItem(res);
       })
       .finally(() => setLoading(false));
   
   }, [itemId]);
 
-  return loading ? <h2>CARGANDO...</h2> : <ItemDetail {...product} />;
+  return loading ? <h2>CARGANDO...</h2> : <ItemDetail item={item} />;
 };

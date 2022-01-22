@@ -1,13 +1,16 @@
-import React,{ useContext }  from 'react';
+import React,{ useContext}  from 'react';
 import '../styles/detail.css';
 import ItemCount from '../itemCount/ItemCount';
 import { CartContext } from '../context/useContext';
 
 
-export const ItemDetail = ({id, name, image, description, price}) => {
+export const ItemDetail = ({item}) => {
 
   const {addItem} = useContext(CartContext)
-  
+
+    const onAdd = (quantity) => {
+        addItem(item, quantity);
+    }
 
 
   return (
@@ -15,16 +18,16 @@ export const ItemDetail = ({id, name, image, description, price}) => {
       <div className='divDet'>
 
         <div className='divImaDet'>
-          <img className='imgDet' src={image} alt={`${id}-${name}`}  />
+          <img className='imgDet' src={item.image} alt={`${item.id}-${item.name}`}  />
         </div>
       
         <div className='divNamePriceDet'>
 
-          <h1>{name}</h1>
+          <h1>{item.name}</h1>
           
           <div className='divPreBtn'>
-            <h2><span>$ </span>{price}</h2>
-            <ItemCount  item={id} stock={5} initial={1} onAdd={addItem} />
+            <h2><span>$ </span>{item.price}</h2>
+            <ItemCount  item={item.id} stock={5} initial={1} onAdd={onAdd} />
           </div>
 
         </div>    
@@ -32,7 +35,7 @@ export const ItemDetail = ({id, name, image, description, price}) => {
       </div> 
       
       <div className='divDesDet'>
-        <p className='textDesDet'>{description}</p>
+        <p className='textDesDet'>{item.description}</p>
       </div>
     </> 
   );

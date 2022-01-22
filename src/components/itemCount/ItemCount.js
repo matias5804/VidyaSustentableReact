@@ -1,7 +1,7 @@
-import React,{ useContext } from 'react'
+import React from 'react'
 import { useState } from 'react';
 import '../styles/detail.css';
-import { CartContext } from '../context/useContext';
+
 
 const ItemCount = ({stock, initial,onAdd }) => {
  
@@ -9,28 +9,36 @@ const ItemCount = ({stock, initial,onAdd }) => {
     // Voy a restar hasta que le numero sea mayor o igual hasta el valor inicial (1)
     //Declaro el hook para el contador 
     
-    const[count, setCount] = useState(initial)
-    const {addItem} = useContext(CartContext)
+    const[quantity, setQuantity] = useState(initial)
+    
 
     const addItemCont = () => {
-       const newValue = count + 1;
+       const newValue = quantity + 1;
        if(newValue <= stock ){
-           setCount(newValue);
+           setQuantity(newValue);
        };
     };
 
-    const quitItemCount = () => {
-        const newValue = count - 1;
+    const quitItemquantity = () => {
+        const newValue = quantity - 1;
         if(newValue >= initial) {
-            setCount(newValue);
+            setQuantity(newValue);
         };
     };
 
-    //const onAdd = () => {
-    //    const message = `Agregaste ${count} producto`;
-    //    //utilizo un condicional ternario  (condicional) ? (true) : (false)
-    //    (count === 1) ? alert (message) : alert( `${message}s`);
-    //};
+    const onAddMensaje = () => {
+        const message = `Agregaste ${quantity} producto`;
+        //utilizo un condicional ternario  (condicional) ? (true) : (false)
+        (quantity === 1) ? alert (message) : alert( `${message}s`);
+    };
+
+    const addToCart = () => {
+        onAdd(quantity);
+        //setQuantity(1);
+        //setChangeBtn(false);
+        //setStockItems(stockItems - quantity);
+        onAddMensaje()
+    };
 
 
     return (
@@ -38,11 +46,10 @@ const ItemCount = ({stock, initial,onAdd }) => {
         <>
             <div className='divAddRest'>
                 <button onClick= {addItemCont}> +</button>
-                <h3>{ count }</h3>
-                <button onClick= {quitItemCount} >-</button>
+                <h3>{ quantity }</h3>
+                <button onClick= {quitItemquantity} >-</button>
             </div>
-        
-            <button className='btnAgregarDetail' onClick= {() => onAdd (addItem)} >Agregar al Carrito</button>
+            <button className='btnAgregarDetail' onClick= {addToCart} >Agregar al Carrito</button>
 
         </>
      

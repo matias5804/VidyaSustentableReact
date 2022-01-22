@@ -1,4 +1,6 @@
-import React, { useContext }from 'react'
+
+
+import React ,{ useContext } from 'react'
 import logoCarrito from '../../assets/imgLogos/logoCarrito.png';
 import { Link } from 'react-router-dom';
 import Cart from '../cart/Cart';
@@ -6,27 +8,23 @@ import { CartContext } from '../context/useContext';
 
 
 const CartWidget = () => {
-
-    const { addedProducts} = useContext(CartContext)
-
+    const {cart} = useContext(CartContext);
 
     let itemsInCart = 0;
 
-    addedProducts.map((item) => {
-        itemsInCart = itemsInCart + item.quantyti;
-    })
+    cart.map((item) => {
+        itemsInCart = itemsInCart + item.quantity;
+        return item;
+    });
 
     return (
-        <div>
-            <div>
-                {itemsInCart}
-            </div>
-           <Link to='../cart/Cart' element={<Cart/>}>
-                <img className="nav__logo" src={logoCarrito} alt="logoCarrito"/>
-           </Link>
-          
-        </div>
-    )
+        <Link to='../cart/Cart' element={<Cart/>}>
+            {cart.length === 0 ? <img className="nav__logo" src={logoCarrito} alt="logoCarrito"/>  : <>
+            <img className="nav__logo" src={logoCarrito} alt="logoCarrito"/>
+            <> {itemsInCart}</>
+            </> }
+        </Link>
+    );       
 }
-
-export default CartWidget
+ 
+export default CartWidget;
