@@ -7,13 +7,11 @@
     align-items: center;
     border-bottom: 1px solid black;
     padding: 10px 0;
-    
 }
 
 .imgCart{
-    width: 60px;
+    width: 70px;
 }
-
 
 .itemInCart{
     font-size: medium;
@@ -39,12 +37,8 @@
     color:white;
 }
 
-.nomItemCart{
-
-}
-
-.priceItemCart{
-
+.priceItemCart , .nomItemCart{
+    font-size: x-large;
 }
 
 .txtCarritoVacio{
@@ -53,14 +47,18 @@
 }
 
 .divTotalSeguirVaciar{
-    margin-top: 20px;
-    padding: 0 15px;
+    margin: 50px  0 100px 0;
+    padding: 0 50px 0 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .txtTotalCarrito{
-
+    border: 1px solid;
+    font-size: x-large;
+    padding: 5px;
+    font-weight: 700;
 }
 
 .btnVaciarCarrito, 
@@ -90,4 +88,8 @@
 .btnSeguirCarrito:hover{
     background-color:#356d65ff;
     color:#f7ecdfff;
+}
+
+.tituloCarrito{
+    margin: 40px;
 }

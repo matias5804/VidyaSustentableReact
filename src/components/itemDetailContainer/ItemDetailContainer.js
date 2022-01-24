@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import {ItemDetail} from '../itemDetail/ItemDetail';
-import  MockedItem  from '../mock/MockedItem';
 import { useParams } from 'react-router-dom';
+import { getFirestore } from '../../firebase/Firebase';
 
 export const ItemDetailContainer = () => {
   
-  const [item, setItem] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [items, setItems] = useState({});
   const { itemId } = useParams();
 
   useEffect(() => {
 
-    setLoading(true);
-    const getItems = new Promise((resolve) => {
-      setTimeout(() => {
-        const myData = itemId && MockedItem.find((item) => item.id === itemId)
-        resolve(myData);
-      }, 1000);
+    const bd = getFirestore();
+    const itemCollection = bd.collection('items');
+
+    itemCollection.get().then((value) => {
+
+      let datos= value.docs.map((e) => { 
+       return {...e.data(), id: e.id}
+      });
+
+      const getItems = new Promise((resolve) => {
+        const items = itemId && datos.find((item) => item.id === itemId)
+        resolve(items);
+      })
+
+      getItems.then((res) => {
+        setItems(res);
+      })
+
     });
 
-    getItems.then((res) => {
-      setItem(res);
-    }).finally(() => setLoading(false));
-  
-  }, [itemId]);
+  },[itemId]) ;
 
-  return loading ? <h2>CARGANDO...</h2> : <ItemDetail item={item} />;
-  
+  return <ItemDetail item={items} />
 };

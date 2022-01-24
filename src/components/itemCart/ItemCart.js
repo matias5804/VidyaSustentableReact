@@ -4,6 +4,7 @@ import '../styles/cart.css';
 
 const ItemCart = ( { productos, removeItem }) => {
     return (
+        
         <div className='divPoductCart' id={productos.item.id} >
            
             <div >

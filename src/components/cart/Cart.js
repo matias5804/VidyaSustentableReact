@@ -12,7 +12,7 @@ const Cart = () => {
     return (
 
         <div className="">
-
+            <h1 className='tituloCarrito'>- CARRITO DE COMPRAS -</h1>
             {cart.length > 0 ? (
                 <div>
                     {cart.map((prod) => {
@@ -24,15 +24,14 @@ const Cart = () => {
                     })}
                 </div>
             ) : (
-                <div>
-                    <h2 className='txtCarritoVacio'>¡El carrito está vacío!</h2>
+
             
-                    <button className='btnSeguirCarrito'>
-                        <Link to="/">
-                            ¡Empezá a comprar!
-                        </Link>
-                    </button>
-                </div>
+                <button className='btnSeguirCarrito'>
+                    <Link to="/">
+                        ¡Empezá a comprar!
+                    </Link>
+                </button>
+
             )}
             {cart.length > 0 && (
 

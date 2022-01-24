@@ -1,34 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { ItemList } from '../itemList/ItemList';
-import MockedItem from '../mock/MockedItem';
 import { useParams } from 'react-router-dom';
+import { getFirestore } from '../../firebase/Firebase';
 
 export const ItemListContainer = () => {
 
   const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
   const { catId } = useParams();
 
-  useEffect(() => {
-    setLoading(true);
-    const getItems = new Promise((resolve) => {
-      setTimeout(() => {
-        const myData = catId
-          ? MockedItem.filter((item) => item.category === catId)
-          : MockedItem;
+    useEffect(() => {
 
-        resolve(myData);
-      }, 1000);
-    });
+      const bd = getFirestore();
+      const itemCollection = bd.collection('items');
 
-    getItems
-      .then((res) => {
-        setItems(res);
-      })
-      .finally(() => setLoading(false));
-  }, [catId]);
+      itemCollection.get().then((value) => {
+        let datos= value.docs.map((e) => { 
+        return {...e.data(), id: e.id}
+        });
 
-  return loading ? (
-    <h2>CARGANDO...</h2>
-  ) : (<ItemList items={items} />);
+        const getItems = new Promise ((resolve) => {
+
+          const myData = catId 
+          ?
+          datos.filter((item) => item.category === catId)
+          :
+          datos;
+
+          resolve(myData);
+
+        })
+
+        getItems.then((res) => {
+          setItems(res)
+        })
+
+      },[catId])
+
+    } );
+
+  return <ItemList items={items} />
+
 };
