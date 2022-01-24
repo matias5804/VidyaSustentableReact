@@ -27,7 +27,6 @@ const Nosotros = () => {
                 
                 <b> Porque creemos que nunca es tarde para contribuir con la preservación de nuestro planeta.</b> 
                 </p>
-
             </div>
 
         </div>

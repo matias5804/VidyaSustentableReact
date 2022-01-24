@@ -32,10 +32,11 @@
     width: 170px;
     height: 35px;
     border: none;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px ;
     background-color:#f1cbb5ff;
     margin-top: 0.7rem;
-    
+    border-color: #356d65ff;
+    border: 0.5px solid ;
 }
 
 .btnAgregarDetail:hover{
@@ -47,7 +48,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .divDesDet{
@@ -58,13 +58,34 @@
     font-size: large;
 }
 
+.divAddRest{
+    display: flex;
+    margin-top: 10px;
+}
+
+.btnCount{
+    width: 25px;
+}
+
+.numCount{
+    margin: 0 10px  ;
+}
+
+/****************************************************/
+
 @media (min-width:600px) {
     
     .divDet{
+        max-width: 560px;
         display: flex;
         flex-direction: row;
         margin: 20px 20px 0px 20px; 
-            
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+
+    .nameDetail{
+        text-align: start;
     }
 
     .divImaDet{
@@ -73,7 +94,7 @@
     }
     
     .divNamePriceDet{
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .divDesDet{
@@ -85,20 +106,22 @@
     }
 }
 
+/*********************************************/
+
 @media (min-width:800px) {
 
-    .divImaDet{
-        max-width: 600px;
-    }
-
     .divDet{
-     display: flex;
-     justify-content: center;
-     
+        left: 50%;
+        right: 50%;
+        width: 800px;
+        display: flex;
+        justify-content: center;
     }
 
     .divDesDet{
         padding-right: 8rem;
         padding-left: 8rem;
     }
+    
+
 }

@@ -1,16 +1,14 @@
 import React from 'react'
 import { useState } from 'react';
 import '../styles/detail.css';
+import { Link } from 'react-router-dom';
+import Cart from '../cart/Cart';
 
 
 const ItemCount = ({stock, initial,onAdd }) => {
  
-    // Voy a Sumar hasta que el numero sea menor o igual que stock
-    // Voy a restar hasta que le numero sea mayor o igual hasta el valor inicial (1)
-    //Declaro el hook para el contador 
-    
     const[quantity, setQuantity] = useState(initial)
-    
+    const [changeBtn, setChangeBtn] = useState(true);
 
     const addItemCont = () => {
        const newValue = quantity + 1;
@@ -28,15 +26,12 @@ const ItemCount = ({stock, initial,onAdd }) => {
 
     const onAddMensaje = () => {
         const message = `Agregaste ${quantity} producto`;
-        //utilizo un condicional ternario  (condicional) ? (true) : (false)
         (quantity === 1) ? alert (message) : alert( `${message}s`);
     };
 
     const addToCart = () => {
         onAdd(quantity);
-        //setQuantity(1);
-        //setChangeBtn(false);
-        //setStockItems(stockItems - quantity);
+        setChangeBtn(false);
         onAddMensaje()
     };
 
@@ -45,12 +40,31 @@ const ItemCount = ({stock, initial,onAdd }) => {
         
         <>
             <div className='divAddRest'>
-                <button onClick= {addItemCont}> +</button>
-                <h3>{ quantity }</h3>
-                <button onClick= {quitItemquantity} >-</button>
-            </div>
-            <button className='btnAgregarDetail' onClick= {addToCart} >Agregar al Carrito</button>
 
+                <button className='btnCount' onClick= {addItemCont}> +</button>
+
+                <h3 className='numCount'>{ quantity }</h3>
+
+                <button className='btnCount' onClick= {quitItemquantity} >-</button>
+                
+            </div>
+
+            { changeBtn ?
+
+                <button className='btnAgregarDetail' onClick= {addToCart} >Agregar al Carrito</button>
+                :
+                <div>
+                    <button className='btnAgregarDetail' onClick = {addToCart}>Agregar al Carrito</button><br/>
+
+                    <Link  to= "/">
+                        <button className='btnAgregarDetail' >Seguir Comprando</button><br/>
+                    </Link>
+                
+                    <Link to= "../cart/Cart" element={<Cart/>} >
+                        <button className='btnAgregarDetail' >Terminar Compra</button>
+                    </Link>
+                </div>
+            }
         </>
      
     )

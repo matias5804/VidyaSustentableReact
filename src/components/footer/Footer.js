@@ -48,7 +48,7 @@ const Footer = () => {
 
             </div>
 
-            <h4 class="footer__copyright">© 2021 Vidya Online</h4>
+            <h4 class="footer__copyright">© 2022 Vidya Online</h4>
         </div>    
     )
 }

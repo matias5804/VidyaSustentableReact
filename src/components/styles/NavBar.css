@@ -17,7 +17,6 @@
 
 .nav__logo{
     height: 20px;
-    margin-right: 0.2rem;
 }
 
 .nav__brand{
@@ -30,7 +29,6 @@
     font-size: medium;
 }
 
-
 /*---------------------------------------------------------*/
 
 /*inicio de los estilos a partir de los 600px*/
@@ -38,7 +36,6 @@
 
     .nav__logo{
         height: 30px;
-        margin-right: 1rem;
     }
     
     .nav__brand{
@@ -57,10 +54,7 @@
 /*inicio de los estilos a partir de los 600px*/
 @media (min-width:1000px) { 
 
-    .nav__logo{
-        height: 40px;
-        margin-right: 2rem;
-    }
+
     
     .nav__logo:hover{
         transform: scale(1.2, 1.2);
@@ -87,5 +81,7 @@
     .navLink:hover{
         font-weight: 700;
     }
+
+
     
 }

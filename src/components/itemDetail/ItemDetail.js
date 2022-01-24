@@ -7,11 +7,9 @@ import { CartContext } from '../context/useContext';
 export const ItemDetail = ({item}) => {
 
   const {addItem} = useContext(CartContext)
-
-    const onAdd = (quantity) => {
-        addItem(item, quantity);
-    }
-
+  const onAdd = (quantity) => {
+      addItem(item, quantity);
+  }
 
   return (
     <>
@@ -23,11 +21,11 @@ export const ItemDetail = ({item}) => {
       
         <div className='divNamePriceDet'>
 
-          <h1>{item.name}</h1>
+          <h1 className='nameDetail'>{item.name}</h1>
           
           <div className='divPreBtn'>
             <h2><span>$ </span>{item.price}</h2>
-            <ItemCount  item={item.id} stock={5} initial={1} onAdd={onAdd} />
+            <ItemCount className='divAddRest' item={item.id} stock={5} initial={1} onAdd={onAdd} />
           </div>
 
         </div>    
@@ -37,7 +35,9 @@ export const ItemDetail = ({item}) => {
       <div className='divDesDet'>
         <p className='textDesDet'>{item.description}</p>
       </div>
+      
     </> 
   );
+
 };
   

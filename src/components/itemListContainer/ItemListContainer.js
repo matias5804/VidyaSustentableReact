@@ -3,12 +3,10 @@ import { ItemList } from '../itemList/ItemList';
 import MockedItem from '../mock/MockedItem';
 import { useParams } from 'react-router-dom';
 
+export const ItemListContainer = () => {
 
-
-export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const { catId } = useParams();
 
   useEffect(() => {

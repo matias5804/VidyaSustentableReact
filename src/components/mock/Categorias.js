@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
 export const Categories = () => {
     const categories = [
       { id: '1Total', address: '/', text: 'Todos' },
@@ -11,7 +10,9 @@ export const Categories = () => {
   
     return (
       <section className='navSelecProducts'>
+
         {categories.map((cat) => {
+
           return (
             <div className="linksProducts" key={cat.id}>
 
@@ -21,7 +22,9 @@ export const Categories = () => {
               
             </div>
           );
+
         })}
+
       </section>
     );
   };

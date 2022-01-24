@@ -35,7 +35,6 @@ const Contacto = () => {
                    
                     </form>
             
-    
                 </div>
 
             </div>
