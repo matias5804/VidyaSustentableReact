@@ -124,6 +124,11 @@ body {
     font-weight: 600;
 }
 
+.loader{
+    width: 200px;
+    margin: 100px auto;
+}
+
 /*---------------------------------------------------------*/
 
 /*inicio de los estilos a partir de los 600px*/
