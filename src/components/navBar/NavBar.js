@@ -6,9 +6,6 @@ import { Link} from 'react-router-dom';
 import Nosotros from '../pages/Nosotros';
 import Contacto from '../pages/Contacto';
 
-
-
-
 const NavBar = () => {
     return (
         <div className="divNav">
@@ -19,7 +16,6 @@ const NavBar = () => {
                 </Link>
             </div>
 
-            
             <ul className="nav__container">
 
                 <li className="nav__item">

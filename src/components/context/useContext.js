@@ -20,34 +20,12 @@ export const CartProvider = ({children}) =>{
         };
     };
 
-    //const addItem = (item, quantity) => { 
-    //    setCart(cart.filter(item => item !== undefined ))
-    //    if(isIncart(item.Id)){
-    //        let index =  cart.findIndex((prod) => prod.item.Id === item.Id)
-    //        let PosibleQuantity = cart[index].quantity + quantity;
-    //        cart[index].quantity = PosibleQuantity
-    //    }else{
-    //       setCart([...cart,{item, quantity}]);
-    //    }console.log(cart);
-    //}
-
-    
-
-   // const removeItem = (id) => { 
-   //     setCart(cart.filter(item => item.item.Id !== id ))
-   //}
-
-
-
     const removeItem = (id) => {
         const deleteProduct = cart.filter((prod) => prod.item.id !== id);
         setCart([...deleteProduct]);
     };
 
-
     const getTotalPrice = () => cart.reduce( (price, {item, quantity}) => price+=quantity*item.price, 0);
-
-
 
     const itemSumatory = ()=>{
         let aux = 0;

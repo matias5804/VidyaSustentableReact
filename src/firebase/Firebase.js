@@ -2,21 +2,19 @@ import firebase from 'firebase/app';
 import '@firebase/firestore'
 
 
-// Your web app's Firebase configuration
 const app = firebase.initializeApp( {
-    apiKey: "AIzaSyAUKtoxnOfsZa3ag0khPuvl88ONynbikcQ",
-    authDomain: "vidya-sustentable.firebaseapp.com",
-    projectId: "vidya-sustentable",
-    storageBucket: "vidya-sustentable.appspot.com",
-    messagingSenderId: "782490251262",
-    appId: "1:782490251262:web:0ed2f16396eee8a02b9aaf"
-  });
+  apiKey: "AIzaSyAUKtoxnOfsZa3ag0khPuvl88ONynbikcQ",
+  authDomain: "vidya-sustentable.firebaseapp.com",
+  projectId: "vidya-sustentable",
+  storageBucket: "vidya-sustentable.appspot.com",
+  messagingSenderId: "782490251262",
+  appId: "1:782490251262:web:0ed2f16396eee8a02b9aaf"
+});
 
-  //de esta forma traemos firebase y firestore
-  export const getFirebase = () =>{
-    return app 
-  };
+export const getFirebase = () =>{
+  return app 
+};
 
-  export const getFirestore = () =>{
-    return firebase.firestore(app)
-  }; 
+export const getFirestore = () =>{
+  return firebase.firestore(app)
+}; 

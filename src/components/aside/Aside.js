@@ -11,7 +11,7 @@ import iconoInstagram from '../../assets/iconos/iconoInstagram.png'
 const Aside = () => {
     return (
         <div>
-             <aside >   
+            <aside >   
 
                 <section className='facilidades'>{/*<!--seccion de facilidades(como pagar, como comprar, envios  y instagram)-->*/}
 
@@ -66,15 +66,10 @@ const Aside = () => {
 
                 </section> 
 
-
-                
-                {/*/boton whatsApp modo fixd , te envia directoi al chat con una pestaña nueva/*/}
-                <a className='fixed-whatsapp' href="https://api.whatsapp.com/send?phone=541133554248'">
-                </a>
+                <a className='fixed-whatsapp' href="https://api.whatsapp.com/send?phone=541133554248'">  </a>
 
             </aside>   
 
-       
         </div>
     )
 }

@@ -12,14 +12,15 @@ const Item = ({id, name, image, price}) => {
                     <img src={image} alt={name} className='imgCard'></img>
                 </div>
             </Link> 
+
             <div className='divProPreBot'>
                 <h3 className="tituloCard">{name}</h3>
                 <p className="precioCard">$ <span>{price}</span></p>
-            <Link to={(`/product/${id}`)}className='div_imgCard'>  
-                <button className="btnComprarCard">
-                    - Ver Artículo -
-                </button>
-            </Link>
+                <Link to={(`/product/${id}`)}className='div_imgCard'>  
+                    <button className="btnComprarCard">
+                        - Ver Artículo -
+                    </button>
+                </Link>
             </div>
         </div>
         

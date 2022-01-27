@@ -42,13 +42,13 @@ const Footer = () => {
                     <h3>NEWSLETTER</h3> 
                     <input type="email" placeholder="ingrese su e-mail"/> 
                     <button className='footer__btn'>Enviar</button>
-              
 
                 </div>
 
             </div>
 
             <h4 class="footer__copyright">© 2022 Vidya Online</h4>
+            
         </div>    
     )
 }

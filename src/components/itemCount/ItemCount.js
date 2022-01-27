@@ -35,9 +35,7 @@ const ItemCount = ({stock, initial,onAdd }) => {
         onAddMensaje()
     };
 
-
     return (
-        
         <>
             <div className='divAddRest'>
 
@@ -66,7 +64,6 @@ const ItemCount = ({stock, initial,onAdd }) => {
                 </div>
             }
         </>
-     
     )
 }
 
