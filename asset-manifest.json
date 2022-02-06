@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/VidyaSustentableReact/static/css/main.2f46a830.chunk.css",
+    "main.js": "/VidyaSustentableReact/static/js/main.7bf1ffd9.chunk.js",
+    "main.js.map": "/VidyaSustentableReact/static/js/main.7bf1ffd9.chunk.js.map",
+    "runtime-main.js": "/VidyaSustentableReact/static/js/runtime-main.e2718549.js",
+    "runtime-main.js.map": "/VidyaSustentableReact/static/js/runtime-main.e2718549.js.map",
+    "static/js/2.29a81536.chunk.js": "/VidyaSustentableReact/static/js/2.29a81536.chunk.js",
+    "static/js/2.29a81536.chunk.js.map": "/VidyaSustentableReact/static/js/2.29a81536.chunk.js.map",
+    "index.html": "/VidyaSustentableReact/index.html",
+    "static/css/main.2f46a830.chunk.css.map": "/VidyaSustentableReact/static/css/main.2f46a830.chunk.css.map",
+    "static/js/2.29a81536.chunk.js.LICENSE.txt": "/VidyaSustentableReact/static/js/2.29a81536.chunk.js.LICENSE.txt",
+    "static/media/comoComprar.11ebb68d.jpg": "/VidyaSustentableReact/static/media/comoComprar.11ebb68d.jpg",
+    "static/media/envios.845b5356.jpg": "/VidyaSustentableReact/static/media/envios.845b5356.jpg",
+    "static/media/fotoContacto.a248df36.jpg": "/VidyaSustentableReact/static/media/fotoContacto.a248df36.jpg",
+    "static/media/iconoComoComprar.9e6d778b.png": "/VidyaSustentableReact/static/media/iconoComoComprar.9e6d778b.png",
+    "static/media/iconoComoPagar.12d4145e.png": "/VidyaSustentableReact/static/media/iconoComoPagar.12d4145e.png",
+    "static/media/iconoEnvio.4efbb748.png": "/VidyaSustentableReact/static/media/iconoEnvio.4efbb748.png",
+    "static/media/iconoInstagram.8add469b.png": "/VidyaSustentableReact/static/media/iconoInstagram.8add469b.png",
+    "static/media/imagenNosotros.1a800959.jpg": "/VidyaSustentableReact/static/media/imagenNosotros.1a800959.jpg",
+    "static/media/logoHorizontal.48bb3720.png": "/VidyaSustentableReact/static/media/logoHorizontal.48bb3720.png",
+    "static/media/logoPrimeroIcon.9cb0427f.jpg": "/VidyaSustentableReact/static/media/logoPrimeroIcon.9cb0427f.jpg",
+    "static/media/mediosDePagos.39f2483f.jpg": "/VidyaSustentableReact/static/media/mediosDePagos.39f2483f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2718549.js",
+    "static/js/2.29a81536.chunk.js",
+    "static/css/main.2f46a830.chunk.css",
+    "static/js/main.7bf1ffd9.chunk.js"
+  ]
+}
