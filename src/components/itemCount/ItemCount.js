@@ -39,11 +39,11 @@ const ItemCount = ({stock, initial,onAdd }) => {
         <>
             <div className='divAddRest'>
 
-                <button className='btnCount' onClick= {addItemCont}> +</button>
+                <button className='btnCount' onClick= {quitItemquantity} >-</button>
 
                 <h3 className='numCount'>{ quantity }</h3>
 
-                <button className='btnCount' onClick= {quitItemquantity} >-</button>
+                <button className='btnCount' onClick= {addItemCont}> +</button>
                 
             </div>
 

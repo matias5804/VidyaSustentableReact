@@ -34,7 +34,7 @@ const Cart = () => {
 
             <h1 className='tituloCarrito'>- CARRITO DE COMPRAS -</h1>
             {cart.length > 0 ? (
-                <div>
+                <div className='divArtCarrito'>
                     {cart.map((prod) => {
                     return <ItemCart
                         key={prod.item.id}
@@ -70,7 +70,7 @@ const Cart = () => {
 
                     </div>
 
-                    <div>
+                    <div className='divOrden'>
 
                         <h2 className='txtTituloPedido'>Orden del Pedido</h2>
                         <h4 className='completePedido'>Por Favor complete la orden para registrar su pedido!</h4>
